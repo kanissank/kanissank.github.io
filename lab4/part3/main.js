@@ -109,6 +109,4 @@ for (const ball of balls) {
 
 requestAnimationFrame(loop);
 }
-
-
 loop();
