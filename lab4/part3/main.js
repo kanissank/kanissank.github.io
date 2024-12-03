@@ -55,7 +55,60 @@ update() {
   if (this.y - this.size <= 0) {
     this.velY = Math.abs(this.velY);
   }
-
+{
   this.x += this.velX;
   this.y += this.velY;
 }
+
+// define ball collision detection
+
+collisionDetect() {
+  for (const ball of balls) {
+    if (!(this === ball)) {
+      const dx = this.x - ball.x;
+      const dy = this.y - ball.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+
+      if (distance < this.size + ball.size) {
+        ball.color = this.color = randomRGB();
+      }
+    }
+  }
+}
+}
+
+// define array to store balls
+
+const balls = [];
+
+// define loop that keeps drawing the scene constantly
+while (balls.length < 25) {
+const size = random(10, 20);
+const ball = new Ball(
+  // ball position always drawn at least one ball width
+  // away from the edge of the canvas, to avoid drawing errors
+  random(0 + size, width - size),
+  random(0 + size, height - size),
+  random(-7, 7),
+  random(-7, 7),
+  randomRGB(),
+  size
+);
+
+balls.push(ball);
+}
+function loop() {
+ctx.fillStyle = 'rgba(0,0,0,0.25)';
+ctx.fillRect(0,0,width,height);
+
+for (const ball of balls) {
+  ball.draw();
+  ball.update();
+  ball.collisionDetect();
+}
+
+requestAnimationFrame(loop);
+}
+
+
+loop();
