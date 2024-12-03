@@ -58,7 +58,7 @@ update() {
 {
   this.x += this.velX;
   this.y += this.velY;
-}
+
 
 // define ball collision detection
 
