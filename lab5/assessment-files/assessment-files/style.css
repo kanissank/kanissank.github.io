@@ -7,7 +7,7 @@ html, body {
 
 html {
   font-size: 10px;
-  background-color: #dde;
+  background-color: #f5f5f5;
 }
 
 body {
@@ -225,14 +225,10 @@ audio {
   flex: 6;
 }
 
-.show-hide {
-  text-align: center;
-  width: 150px;
-}
-
-.comment-form input, .comment-form label, .show-hide {
-  font-size: 1.6rem;
-  line-height: 32px;
+.comment-form input {
+  margin-left: 1rem;
+  padding: 1rem; /* Ensure there is enough space inside inputs */
+  flex: 6;
 }
 
 .comment-form input[type="submit"], .show-hide {
