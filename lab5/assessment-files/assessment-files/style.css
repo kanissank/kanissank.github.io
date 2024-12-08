@@ -1149,7 +1149,7 @@ article {
 
 div[class="nav"] {
   height: 50px;
-  background-color: #ff80ff; /* Bright background */
+  background-color: white; /* Bright background */
   display: flex;
   padding: 1% 0;
   margin-bottom: 10px;
