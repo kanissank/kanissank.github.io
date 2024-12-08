@@ -7,44 +7,25 @@ html, body {
 
 html {
   font-size: 10px;
-  background-color: #f5f5f5;
+  background-color: #dde;
 }
 
 body {
-  width: 90%;
-  min-width: 320px;
+  width: 80%;
+  min-width: 1024px;
   margin: 0 auto;
-  color: #333;
 }
 
 /* || typography */
 
-h1, h2, h3 {
+font[size="7"], font[size="6"], font[size="5"] {
   font-family: 'Sonsie One', cursive;
   color: #2a2a2a;
 }
-h1 {
-  font-size: 4rem;
-  text-align: center;
-  color: white;
-  text-shadow: 2px 2px 10px black;
-}
-
-h2 {
-  font-size: 3rem;
-  text-align: center;
-}
-
-h3 {
-  font-size: 2.2rem;
-}
-
 
 p, input, li, table, label {
   font-family: 'Open Sans Condensed', sans-serif;
   color: #2a2a2a;
-  font-size: 1.6rem;
-  line-height: 1.5;
 }
 
 font[size="7"] {
@@ -54,11 +35,24 @@ font[size="7"] {
   text-shadow: 2px 2px 10px black;
 }
 
+font[size="6"] {
+  font-size: 3rem;
+  text-align: center;
+}
+
+font[size="5"] {
+  font-size: 2.2rem;
+}
+
+p, li, table {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
 /* || header layout */
 
 div[class="nav"], article, footer, .secondary {
-  background-color: white
-rgb(0, 85, 128);
+  background-color: white;
 }
 
 article, footer, .secondary {
@@ -185,21 +179,13 @@ audio {
 
 .show-hide {
   cursor: pointer;
-  background-color: #333;
-  color: white;
-  padding: 0.5rem 1rem;
-  border: none;
-  font-size: 1.6rem;
-  text-align: center;
-  border-radius: 5px;
-  width: auto;
 }
 
-.comments h3 {
+.comments font[size="6"] {
   font-size: 2rem;
 }
 
-.comments h3:nth-of-type(2) {
+.comments font[size="6"]:nth-of-type(2) {
   margin-bottom: 0;
 }
 
@@ -216,19 +202,21 @@ audio {
   align-self: center;
   flex: 2;
   text-align: right;
-  padding-right: 1rem;
 }
 
 .comment-form input {
   margin-left: 1rem;
-  padding: 1rem;
   flex: 6;
 }
 
-.comment-form input {
-  margin-left: 1rem;
-  padding: 1rem; /* Ensure there is enough space inside inputs */
-  flex: 6;
+.show-hide {
+  text-align: center;
+  width: 150px;
+}
+
+.comment-form input, .comment-form label, .show-hide {
+  font-size: 1.6rem;
+  line-height: 32px;
 }
 
 .comment-form input[type="submit"], .show-hide {
@@ -260,25 +248,3 @@ audio {
 .comment-container li p:nth-child(2) {
   flex: 5;
 }
-
-/* Focus styles for keyboard navigation */
-a:focus, button:focus, input:focus {
-  outline: 2px solid #f5a623; /* Visible focus outline */
-  outline-offset: 2px;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  main {
-    flex-direction: column;
-  }
-  
-  .secondary {
-    flex: 1;
-  }
-  
-  .nav ul {
-    flex-direction: column; /* Stack navigation links vertically */
-  }
-}
-
