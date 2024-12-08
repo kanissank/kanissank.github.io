@@ -1136,7 +1136,7 @@ p, li, table {
 
 /* Header layout */
 div[class="nav"], article, footer, .secondary {
-  background-color: #007e8c; /* Improved contrast */
+  background-color: white; /* Improved contrast */
 }
 
 article, footer, .secondary {
