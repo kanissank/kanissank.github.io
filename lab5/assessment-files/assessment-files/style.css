@@ -54,8 +54,7 @@ p, li, table {
 
 div[class="nav"], article, footer, .secondary {
   background-color: white;
-  text-align: center;
-}
+ 
 
 article, footer, .secondary {
   padding: 10px 30px;
